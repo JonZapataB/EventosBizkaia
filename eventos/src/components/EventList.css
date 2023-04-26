@@ -1,0 +1,56 @@
+.event-list{
+    margin-top: 10px;
+}
+.eventTittle{
+    color:rgb(164, 75, 3);
+}
+
+.eventContainer{
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.infoEvent{
+    background-color: rgb(164, 75, 3);
+    margin: 20px;
+    list-style: none;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 255, .2);
+
+}
+.imagenes{
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.botonPrevious{
+    color:#fff;
+    border:none;
+    background-color:rgb(164, 75, 3);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.botonNext{
+    color:#fff;
+    border:none;
+    background-color:rgb(164, 75, 3);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.listPage{
+    font-size: 20px;
+    text-align: center;
+}

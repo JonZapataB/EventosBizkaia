@@ -1,0 +1,25 @@
+.eventsTittle{
+    color:rgb(164, 75, 3);
+    font-size: 35px;
+}
+.eventList{
+    background-color: rgb(164, 75, 3);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+}
+
+.eventList li:hover{
+    background-color: rgb(164, 75, 3);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    font-size: 20px;
+}
+
+.eventList li{
+    margin-left:5px;
+    margin-right: 5px;
+    list-style: none;
+}
