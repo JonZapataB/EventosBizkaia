@@ -1,10 +1,12 @@
 import {useState,useEffect} from "react";
 import './EventList.css';
+import EventModal from "./EventModal";
 
 const EventList = ({eventType}) => {
     const [events, setEvents] = useState([]);
     const [page,setPage] = useState(1);
     const [totalPages,setTotalPages] = useState(1);
+    const [selectedEvent,setSelectedEvent] = useState(null);
 
     useEffect(()=> {
         setPage(1);
@@ -34,17 +36,18 @@ const EventList = ({eventType}) => {
 
     return (
         <section className="event-list">
-            <h2 class='eventTittle'>Eventos</h2>
-            {page >1 && <button class='botonPrevious' onClick={previousPage}>Anterior</button>}
-            <h3 class='listPage'>Página {page}/{totalPages}</h3>
-            {page < totalPages && <button class='botonNext' onClick={nextPage}>Siguiente</button>}
-            <ul class='eventContainer'>
+            <h2 className='eventTittle'>Eventos</h2>
+            
+            <h3 className='listPage'>Página {page}/{totalPages}</h3>
+            {page >1 && <button className='botonPrevious' onClick={previousPage}>Anterior</button>} {page < totalPages && <button class='botonNext' onClick={nextPage}>Siguiente</button>}
+            <ul className='eventContainer'>
                 {events.map(event => (
-                    <li class='infoEvent'key={event.id}>
-                        {event.images.length > 0 ? <img class='imagenes'src={event.images[0].imageUrl} alt={event.images[0].imageFileName} /> : null}
+                    <li className='infoEvent'key={event.id} onClick={()=>setSelectedEvent(event.id)}>
+                        {event.images.length > 0 ? <img className='imagenes'src={event.images[0].imageUrl} alt={event.images[0].imageFileName} /> : <img className='imagenes' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png' alt='Imagen no disponible'/>}
                         <h3>{event.nameEs}</h3>
                         <p>{event.startDate.split("T")[0]} - {event.endDate.split("T")[0]}</p>
                         <p>{event.openingHoursEs}</p>
+                        <EventModal event={event} className={selectedEvent == event.id ? 'show':''} close={()=> setSelectedEvent(null)}/>
                         
                     </li>
                 ))}

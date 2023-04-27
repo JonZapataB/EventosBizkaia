@@ -25,6 +25,7 @@
     width: 400px;
     height: 500px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 255, .2);
+    transition: background-color 0.4s ease-out 100ms
 
 }
 .imagenes{
@@ -54,4 +55,8 @@
 .listPage{
     font-size: 20px;
     text-align: center;
+}
+
+.infoEvent:hover {
+    background-color: #182825;
 }

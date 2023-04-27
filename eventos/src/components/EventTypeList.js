@@ -14,8 +14,8 @@ const EventTypeList = ({handleClick,selectedType}) => {
 
     return (
         <div>
-            <h2 class='eventsTittle'>Tipos de eventos</h2>
-            <ul class='eventList'>
+            <h2 className='eventsTittle'>Tipos de eventos</h2>
+            <ul className='eventList'>
                 <li className={selectedType === 0 ? 'selected':''} onClick={()=>handleClick(0)}>Todos</li>
                 {eventTypes.map(eventType => (
                     <li className={selectedType === eventType.id ?'selected':''}key={eventType.id} onClick={()=>handleClick(eventType.id)}>{eventType.nameEs}</li>
