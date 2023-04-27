@@ -1,25 +1,45 @@
 .eventsTittle{
-    color:rgb(164, 75, 3);
+    color:#fff;
     font-size: 35px;
+    object-position: center;
+    background-color: #182825;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .eventList{
     background-color: rgb(164, 75, 3);
     color: #fff;
-    padding: 5px;
+    /* padding: 5px; */
     text-align: center;
     display: flex;
+    justify-content: center;
+    margin-top:0px;
+    font-size: 20px;
+    
+    
 }
 
 .eventList li:hover{
-    background-color: rgb(164, 75, 3);
+    /* background-color: rgb(164, 75, 3); */
     color: #fff;
     text-align: center;
     display: flex;
-    font-size: 20px;
+    font-size: 25px;
+    
 }
 
 .eventList li{
-    margin-left:5px;
+    margin-left:10px;
     margin-right: 5px;
     list-style: none;
+    cursor: pointer;
+    
+}
+
+.selected{
+    background-color: #182825;
+    color:rgb(164, 75, 3);
+    padding: 5px;
+    
 }

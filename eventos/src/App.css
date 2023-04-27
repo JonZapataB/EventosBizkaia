@@ -1,11 +1,12 @@
 h1{
   font-size: 50px;
-  background-color: rgb(164, 75, 3);
-
+  color:#fff;
+  margin-top:0px;
 }
 
 .App {
   text-align: center;
+  background-color: #95B2B8; 
 }
 
 .App-logo {
@@ -20,7 +21,7 @@ h1{
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #95B2B8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

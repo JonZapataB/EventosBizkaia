@@ -1,7 +1,7 @@
 import {useState,useEffect} from "react";
 import './EventTypeList.css';
 
-const EventTypeList = () => {
+const EventTypeList = ({handleClick,selectedType}) => {
     const [eventTypes, setEventTypes] = useState([]);
 
     useEffect(()=> {
@@ -16,8 +16,9 @@ const EventTypeList = () => {
         <div>
             <h2 class='eventsTittle'>Tipos de eventos</h2>
             <ul class='eventList'>
+                <li className={selectedType === 0 ? 'selected':''} onClick={()=>handleClick(0)}>Todos</li>
                 {eventTypes.map(eventType => (
-                    <li key={eventType.id}>{eventType.nameEs} / {eventType.nameEu}</li>
+                    <li className={selectedType === eventType.id ?'selected':''}key={eventType.id} onClick={()=>handleClick(eventType.id)}>{eventType.nameEs}</li>
                 ))}
             </ul>
         </div>
